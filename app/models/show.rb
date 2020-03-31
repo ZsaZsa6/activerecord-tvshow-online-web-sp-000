@@ -6,7 +6,7 @@ class Show < ActiveRecord::Base
   end
   def self.most_popular_show
     # binding.pry
-    self.where('rating >= ?', 10)
+    self.where('rating >= ?', 10).first
 
   end
   def self.lowest_rating
