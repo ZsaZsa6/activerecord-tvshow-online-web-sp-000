@@ -6,14 +6,14 @@ class Show < ActiveRecord::Base
   end
   def self.most_popular_show
     # binding.pry
-    most_pop = self.where('rating >= ?', 10)
-    most_pop
+    self.where('rating >= ?', 10)
 
   end
   def self.lowest_rating
     self.minimum(:rating)
   end
   def self.least_popular_show
+    self.where('rating ')
   end
   def self.ratings_sum
     self.sum(:rating)
